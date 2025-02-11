@@ -3,7 +3,7 @@
 
 This repository is designed to test MapReduce jobs using a simple word count dataset.
 
-## Project Overview
+### Project Overview
 
 This project implements a Word Count program using Hadoop MapReduce. It processes a text file and counts the occurrences of each word, producing a sorted output of words and their frequencies.
 
