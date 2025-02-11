@@ -3,6 +3,10 @@
 
 This repository is designed to test MapReduce jobs using a simple word count dataset.
 
+## Project Overview
+
+This project implements a Word Count program using Hadoop MapReduce. It processes a text file and counts the occurrences of each word, producing a sorted output of words and their frequencies.
+
 ## Objectives
 
 By completing this activity, students will:
@@ -44,7 +48,7 @@ mv target/*.jar shared-folder/input/code/
 Copy the JAR file to the Hadoop ResourceManager container:
 
 ```bash
-docker cp shared-folder/input/code/<your-jar-file>.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
+docker cp shared-folder/input/code/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
 ```
 
 ### 5. **Move Dataset to Docker Container**
@@ -88,7 +92,7 @@ hadoop fs -put ./input.txt /input/dataset
 Run your MapReduce job using the following command:
 
 ```bash
-hadoop jar /opt/hadoop-3.2.1/share/hadoop/mapreduce/<your-jar-file>.jar com.example.controller.Controller /input/dataset/input.txt /output
+hadoop jar /opt/hadoop-3.2.1/share/hadoop/mapreduce/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar com.example.controller.Controller /input/dataset/input.txt /output
 ```
 
 ### 9. **View the Output**
@@ -116,3 +120,24 @@ To copy the output from HDFS to your local machine:
     docker cp resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/output/ shared-folder/output/
     ```
 3. Commit and push to your repo so that we can able to see your output
+
+
+## Sample Input 
+Hadoop is a framework for distributed processing.
+Hadoop is designed to scale across clusters.
+
+## Sample Output
+Hadoop 2
+is 2
+a 1
+framework 1
+for 1
+distributed 1
+processing 1
+designed 1
+to 1
+scale 1
+across 1
+clusters 1
+
+
